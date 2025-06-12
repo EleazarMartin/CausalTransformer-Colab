@@ -16,6 +16,7 @@ model:
     attn_dropout: True
     disable_cross_attention: False
     isolate_subnetwork: False
+    max_seq_length: 10
 
 
 dataset:
