@@ -2,7 +2,7 @@ model:
   dim_treatments: 1
   dim_vitals: 0
   dim_static_features: 1
-  dim_outcome: 1
+  dim_outcomes: 1
 
 dataset:
   val_batch_size: 64
