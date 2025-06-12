@@ -5,7 +5,7 @@ model:
   dim_outcomes: 1
   autoregressive: true
 
-  multi:  
+  multi:
     seq_hidden_units: 32
     br_size: 32
     fc_hidden_units: 64
@@ -13,10 +13,14 @@ model:
     num_heads: 2
     head_size: 8
     num_layer: 2
-    attn_dropout: True
-    disable_cross_attention: False
-    isolate_subnetwork: False
+    attn_dropout: true
+    disable_cross_attention: false
+    isolate_subnetwork: false
     max_seq_length: 10
+    self_positional_encoding:
+      absolute: true
+      learned: false
+      use_sin: true
 
 
 dataset:
