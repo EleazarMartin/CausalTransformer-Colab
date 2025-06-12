@@ -8,6 +8,11 @@ from pytorch_lightning.loggers import MLFlowLogger
 from pytorch_lightning.utilities import rank_zero_only
 from copy import deepcopy
 from typing import List
+import yaml
+
+def load_config(path):
+    with open(path, 'r') as f:
+        return yaml.safe_load(f)
 
 
 def grad_reverse(x, scale=1.0):
