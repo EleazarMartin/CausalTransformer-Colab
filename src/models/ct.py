@@ -48,6 +48,8 @@ class CT(EDCT):
             **kwargs: Other arguments
         """
         super().__init__(args, dataset_collection, autoregressive, has_vitals, bce_weights)
+        self.autoregressive = True  
+
 
         if self.dataset_collection is not None:
             self.projection_horizon = self.dataset_collection.projection_horizon
