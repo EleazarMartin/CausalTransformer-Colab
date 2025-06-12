@@ -1,9 +1,21 @@
 model:
-  dim_treatments: 1
+  dim_treatments: 4
   dim_vitals: 0
   dim_static_features: 1
   dim_outcomes: 1
   autoregressive: true
+
+  multi:  
+    seq_hidden_units: 32
+    br_size: 32
+    fc_hidden_units: 64
+    dropout_rate: 0.1
+    num_heads: 2
+    head_size: 8
+    num_layer: 2
+    attn_dropout: True
+    disable_cross_attention: False
+    isolate_subnetwork: False
 
 
 dataset:
