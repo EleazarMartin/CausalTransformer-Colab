@@ -1,0 +1,27 @@
+model:
+  dim_treatments: 1
+  dim_vitals: 0
+  dim_static_features: 1
+  dim_outcome: 1
+
+dataset:
+  val_batch_size: 64
+  treatment_mode: multiclass
+
+exp:
+  seed: 42
+  gpus: 0
+  max_epochs: 10
+  logging: False
+  mlflow_uri: null
+  unscale_rmse: True
+  percentage_rmse: True
+
+  alpha: 1.0
+  update_alpha: True
+  alpha_rate: exp
+  balancing: grad_reverse
+
+  bce_weight: False
+  weights_ema: False
+  beta: 0.99
