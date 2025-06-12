@@ -10,9 +10,11 @@ from copy import deepcopy
 from typing import List
 import yaml
 
+from omegaconf import OmegaConf
+
 def load_config(path):
-    with open(path, 'r') as f:
-        return yaml.safe_load(f)
+    return OmegaConf.load(path)
+
 
 
 def grad_reverse(x, scale=1.0):
